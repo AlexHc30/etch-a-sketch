@@ -1,3 +1,33 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
 #mainHeader {
     text-align: center;
+}
+
+#mainDiv {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+#drawingBoard {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 512px;
+    height: 512px;
+}
+
+.row {
+    display: flex;
+    flex-grow: 1;
+}
+
+.element {
+    flex-grow: 1;
+    border: 1px solid black;
 }

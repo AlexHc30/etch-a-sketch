@@ -12,6 +12,15 @@ function generateBoard() {
         row.classList = ('row');
         drawingBoard.appendChild(row);
     }
+    const divs = document.querySelectorAll('.element');
+    divs.forEach(div => {
+        div.addEventListener('mouseenter', drawing)
+        return div;
+    });
 }
 
 generateBoard();
+
+function drawing(div) {
+    div.target.style = 'background-color : #999'
+}
