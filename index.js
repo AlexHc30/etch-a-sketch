@@ -23,17 +23,27 @@ generateBoard(16);
 
 let randClicked;
 const randomColor = document.querySelector('#randomColor');
-    randomColor.addEventListener('click', () => {
-        return randClicked = true;
-    });
+randomColor.addEventListener('click', () => {
+    return randClicked = true;
+});
+
+const black = document.querySelector('#black');
+black.addEventListener('click', () => {
+    return randClicked = false;
+});
+
     
-function drawing(div) {
-    if(randClicked) {
-        currentColor = generateRandomColor();
-        div.target.style = `background-color : ${currentColor}`;
-    } else if(!randClicked) {
-        currentColor = defaultColor;
-        div.target.style = `background-color : ${currentColor}`;
+function drawing(event) {
+    if(event.buttons === 0) {
+        return;
+    } else {
+        if(randClicked) {
+            currentColor = generateRandomColor();
+            event.target.style = `background-color : ${currentColor}`;
+        } else if(!randClicked) {
+            currentColor = defaultColor;
+            event.target.style = `background-color : ${currentColor}`;
+        }
     }
 }
 
@@ -41,7 +51,6 @@ const customGrid = document.querySelector('#customGrid');
 customGrid.addEventListener('click', changeGridSize);
 
 function changeGridSize() {
-    randClicked = false;
     const drawingBoard = document.querySelector('#drawingBoard');
     while(drawingBoard.firstChild) {
         drawingBoard.removeChild(drawingBoard.firstChild);

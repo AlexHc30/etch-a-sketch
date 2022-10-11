@@ -7,15 +7,18 @@
     <title>Etch-a-Sketch</title>
     <link rel="stylesheet" href="style.css">
  </head>
- <body>
+ <body  ondragstart="return false;" ondrop="return false;">
     <h1 id="mainHeader">Etch-a-Sketch</h1>
     <div id="mainDiv">
       <div id="settings">
          <div>
-            <button id="customGrid">Change grid size</button>
+            <button id="customGrid">Board Size</button>
          </div>
          <div>
             <button id="randomColor">Random Color</button>
+         </div>
+         <div>
+            <button id="black">Black</button>
          </div>
       </div>
       <div id="drawingBoard"></div>
