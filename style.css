@@ -1,3 +1,5 @@
+@import 'https://fonts.googleapis.com/css?family=Pacifico|Open+Sans+Condensed:300';
+
 *, *::before, *::after {
     box-sizing: border-box;
     padding: 0;
@@ -5,44 +7,64 @@
 }
 
 body {
-    display: flex;
-    flex-direction: column;
     margin: 0;
+    background-color: #d6eff294;
 }
 
 button {
-    width: 130px;
-    height: 30px;
-    font-size: 12px;
-    font-weight: 500;
+    min-width: 160px;
+    padding: 10px;
+    font-size: 20px;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-family: 'Open Sans Condensed';
+}
+
+button:hover {
+    outline: 0;
+    border: 1px solid #58adb8;
+    box-shadow: 0 0 0 2px #58adb8;
+}
+
+.buttonDiv {
+    box-sizing: border-box;
 }
 
 #mainHeader {
     text-align: center;
-    font-size: 48px;
-    padding: 30px 0;
+    font-size: 65px;
+    font-weight: 100;
+    padding: 10px 0px 20px 0px;
     margin: 0;
+    font-family: Pacifico;
 }
 
 #settings {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
     gap: 30px;
 }
 
 #mainDiv {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 25px;
+    gap: 90px;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 #drawingBoard {
     align-self: center;
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    background-color: #f3eceb7a;
     width: 512px;
     height: 512px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .row {
