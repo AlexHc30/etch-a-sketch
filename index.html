@@ -11,14 +11,25 @@
     <h1 id="mainHeader">Etch-a-Sketch</h1>
     <div id="mainDiv">
       <div id="settings">
+         <input type="color" id="colorPick" name="colorPick" value="#333333">
          <div>
-            <button id="customGrid">Board Size</button>
+            <button id="colorButton" class="option">Color Pick</button>
          </div>
          <div>
-            <button id="randomColor">Random Color</button>
+            <button id="randomColor" class="option">Random Colors</button>
          </div>
          <div>
-            <button id="black">Black</button>
+            <button id="black" class="selected option">Black</button>
+         </div>
+         <div>
+            <button id="eraser" class="option">Eraser</button>
+         </div>
+         <div>
+            <button id="clear">Clear</button>
+         </div>
+         <div id="rangeValue">
+            <p id="gridValue"></p>
+            <input type="range" min="16" max="64" value="16" id="slider">
          </div>
       </div>
       <div id="drawingBoard"></div>
